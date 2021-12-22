@@ -1,11 +1,6 @@
-# Matplotlib Homework - The Power of Plots
+# The Power of Plots
 
 ## Background
-
-What good is data without a good plot to tell the story?
-
-So, let's take what you've learned about Python Matplotlib and apply it to a real-world situation and dataset:
-
 ![Laboratory](Images/Laboratory.jpg)
 
 While your data companions rushed off to jobs in finance and government, you remained adamant that science was the way for you. Staying true to your mission, you've joined Pymaceuticals Inc., a burgeoning pharmaceutical company based out of San Diego. Pymaceuticals specialises in anti-cancer pharmaceuticals. In its most recent efforts, it began screening for potential treatments for squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
@@ -34,8 +29,6 @@ Your tasks are to do the following:
 
 * Using Matplotlib, generate a box and whisker plot of the final tumour volume for all four treatment regimens and highlight any potential outliers in the plot by changing their colour and style.
 
-  **Hint**: All four box plots should be within the same figure. Use this [Matplotlib documentation page](https://matplotlib.org/gallery/pyplots/boxplot_demo_pyplot.html#sphx-glr-gallery-pyplots-boxplot-demo-pyplot-py) for help with changing the style of the outliers.
-
 * Select a mouse that was treated with Capomulin and generate a line plot of tumour volume vs. time point for that mouse.
 
 * Generate a scatter plot of mouse weight versus average tumour volume for the Capomulin treatment regimen.
@@ -44,12 +37,64 @@ Your tasks are to do the following:
 
 * Look across all previously generated figures and tables and write at least three observations or inferences that can be made from the data. Include these observations at the top of notebook.
 
-Here are some final considerations:
-
-* You must use proper labelling of your plots, to include properties such as: plot titles, axis labels, legend labels, _x_-axis and _y_-axis limits, etc.
-
-* See the [starter workbook](Pymaceuticals/pymaceuticals_starter.ipynb) for help on what modules to import and expected format of the notebook.
-
 ### Copyright
 
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+## **Languages used**:
+- Python
+
+## **Python Packages Used**:
+- Pandas
+- Scipy.stats
+- Numpy
+- Matplotlib
+
+  
+## **Conclusions**
+
+From the scatter plot of weight vs average tumor volume, we can see that as weight increase, the average tumor volume increases as well. The correaltion ceoffecient value was 0.84, meaning that weight and average tumor volume are highly correlated.
+
+For the mouse t565, we can see that as the study went on, the tumor volume drecreased to about 34 from 45. This mouse used the Capomulin treatment. (This might be the case for other mice treated with Capomulin).
+
+From the boxplot we can see that for the treatments Ramicane and Infubinol, the data seems to be normally distributed. For the other two treatments it appears that 50% of the data is below the median value. For the Infubinol treatment there is only one outlier, while the other three treatments do not have any outliers.
+
+From the summary statistics table we can see that Ramicane has the lowest mean and median values, suggesting that this treatment may be the most promising (40.22 and 40.67 respectivley). It also has the lowest standard error value 0.32. It is then closely followed by the Capomulin treatment.
+
+This is almost an equal amount of male and female mice.
+
+## **Screenshots**
+## **Pandas Bar Chart**
+![Pandas Bar Chart](Images/pandas_bar.png)
+## **MatplotLib Bar Chart**
+![MatplotLib Bar Chart](Images/matplotlib_bar.png)
+## **Pandas Pie Chart**
+![Pandas Pie Chart](Images/pandas_pie.png)
+## **MatplotLib Pie Chart**
+![MatplotLib Pie Chart](Images/matplotlib_pie.png)
+## **Boxplot**
+![Boxplot](Images/Boxplot.png)
+## **Line Graph**
+![Line Graph](Images/line.png)
+## **Scatter Plot**
+![Scatter Plot](Images/scatter.png)
+## **Regression Line**
+![Regression Line](Images/regression.png)
+
+## **Running the jupyter notebooks**
+1. Before running any of the jupyter notebooks please install needed packages running the following code in the terminal.
+         
+        pip install pandas
+        pip install matplotlib.pyplot
+        pip install scipy.stats
+        pip install numpy
+
+Or run this code in the first Jupyter Notebook
+
+        ! pip install --user pandas
+        ! pip install --user matplotlib.pyplot 
+        ! pip install --user scipy.stats 
+        ! pip install --user numpy
+
+2. Run the file *pymaceuticals.ipynb* 
+
